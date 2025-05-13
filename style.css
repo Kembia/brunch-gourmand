@@ -8,6 +8,8 @@
     --dark-bg: #2d3436;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
+    --dark-color: #000;
+    --transition: all 0.3s ease;
 }
 
 /* Reset et styles de base */
@@ -60,6 +62,19 @@ body {
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 5px;
+    transition: var(--transition);
 }
 
 /* Hero Banner */
@@ -414,13 +429,17 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .navbar {
         padding: 1rem;
     }
 
     .nav-links {
         display: none;
+    }
+
+    .burger {
+        display: block;
     }
 
     .hero-content h1 {
